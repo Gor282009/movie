@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+}
+
+header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #101010;
+  border-bottom: 1px solid #505050;
+}
+
+.header-cont {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+
+#search-cont{
+  display: flex;
+  gap: 6px;
+}
+.logo{
+  width: 250px;
+  height: 50px;
+}
+
+.logo > a{
+  width: 100%;
+  height: 100%;
+}
+
+.logo > a > img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#movie-head {
+  display: flex;
+  justify-content: center;
+  background-color: #101010;
+}
+
+#movie {
+  width: 1000px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 20px;
+  padding: 40px 0;
+}
+
+.movie-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+.search {
+  flex: 1;
+  color: white;
+  border: none;
+  transition: 1s;
+  font-size: 16px;
+  background-color: transparent;
+  padding: 6px;
+  border: solid 1px white;
+  border-radius: 10px;
+}
+
+.myBtn {
+  padding: 6px;
+  color: #101010;
+  border: none;
+  cursor: pointer;
+  transition: 1s;
+  font-size: 16px;
+  border: solid 1px white;
+  border-radius: 10px;
+
+
+}
+
+.myBtn:hover {
+  background-color: black;
+  border: solid 1px white;
+  color: white;
+}
+
+.search:hover {
+  border: solid 1px white;
+}
+
+
+.movie_item{
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.movie_item > img{
+  transition: 1s ease-in-out;
+  border-radius: 20px;
+}
+
+.movie_item:hover > img{
+  transform: scale(1.2);
+}
+
+@media screen and (max-width:1010px){
+  #movie{
+    display: flex;
+    flex-direction: column;
+    padding: 200px;
+  }
+}
+
+@media screen and (max-width:768px){
+  #movie{
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+  }
+}
+
+#loader {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.loader {
+  width: 60px;
+  height: 60px;
+  border: 10px solid red; 
+  border-top: 10px solid #101010;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loader-cont{
+  position: relative;
+  top: 400px;
+  left: 520px;
+}

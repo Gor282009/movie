@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+}
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #101010;
+  border-bottom: 1px solid #505050;
+}
+.netflixPhoto {
+  width: 250px;
+  height: 100px;
+  background-image: url(https://images.ctfassets.net/y2ske730sjqp/1aONibCke6niZhgPxuiilC/2c401b05a07288746ddf3bd3943fbc76/BrandAssets_Logos_01-Wordmark.jpg?w=940);
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: 1s ease-in-out;
+}
+.logo {
+  width: 250px;
+  height: 50px;
+}
+
+.logo > a {
+  width: 100%;
+  height: 100%;
+}
+
+.logo > a > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#movie-head {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #101010;
+}
+#movie {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  color: white;
+}
+
+.movie-cont {
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(20px);
+  padding: 40px;
+  border-radius: 20px;
+}
+.overview {
+  line-height: 30px;
+}
+.date {
+  padding-top: 10px;
+}
+.left {
+  width: 250px;
+  height: 400px;
+}
+
+.left > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.right {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+.home {
+  width: 100%;
+  padding: 100px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 20px;
+}
+.actors-cont {
+  width: 100%;
+  height: 300px;
+  border: solid 1px white;
+  backdrop-filter: blur(20px);
+  background-color: black;
+  display: flex;  
+}
+
+.actor-item{
+  width: 100%;
+  height: 100%;
+}
+.actor-photo {
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+  
+}
+
+.actor-name {
+  color: white;
+}
+
+  @media screen and (max-width:963px) {
+    .movie-cont{
+      display: flex;
+      flex-direction: column;
+    }
+    .home{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+
+  .netflixPhoto:hover{
+    transform: scale(1.2);
+  }
+
+  .cont{
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 30px
+  }
+
+
+
+  #loader {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .loader {
+    width: 60px;
+    height: 60px;
+    border: 10px solid red; 
+    border-top: 10px solid #101010;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .loader-cont{
+    position: absolute;
+    top: 200px;
+    left: 550px;
+  }
